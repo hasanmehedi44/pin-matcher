@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="pin-box" class="form-control" type="text">
+                    <button id="pin-generator" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form action="" name="pinInputSection">
+                <div class="input-section half-width">
+                    <input maxlength="4" id="pin-input" name="pinInputScreen" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+
+                              <div class="button"><input onclick="pinInputSection.pinInputScreen.value = pinInputSection.pinInputScreen.value +  '7'"  class="" type="button" value="7"> </div>
+
+                              <div class="button"><input value="8" type="button" onclick="pinInputSection.pinInputScreen.value = pinInputSection.pinInputScreen.value + '8'" ></div>
+
+                              <div class="button"><input value="9" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '9'" /> </div>
+
+                            </div>
+
+
+                            <div class="calc-button-row">
+
+                              <div class="button"><input value="4" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '4'" ></div>
+
+                              <div class="button"><input value="5" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '5'" ></div>
+
+                              <div class="button"><input value="6" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '6'" ></div>
+
+                            </div>
+
+
+                            <div class="calc-button-row">
+
+                              <div class="button"><input value="1" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '1'" ></div>
+
+                              <div class="button"><input value="2" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '2'" ></div>
+
+                              <div class="button"><input value="3" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '3'" ></div>
+
+                            </div>
+
+
+                            <div class="calc-button-row">
+
+                                <div class="button"><input value="<" type="button" onclick="back()"></div>
+
+                                <div class="button"><input value="0" type="button" onclick="pinInputSection.pinInputScreen.value =pinInputSection.pinInputScreen.value +  '0'" > </div>
+
+                                <div class="button"><input onclick="pinInputScreen.value = null " value="C" type="button"> </div>
+
+                            </div>
+                            <div>
+                              <input id="submit" type="button" class="submit-btn" value="Submit"> 
+                                <p class="action-left"><span id="anotherTry"></span> <span id="try">3</span> try left</p>
+                                <p id="timeRemaining"></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </form>
+        <div class="notify-section">
+            <div  id="try-again">
+            <p class="notify">❌ Pin Didn't Match, Please try again</p>
+            </div>
+            <div id="pin-matched">
+            <p  class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            </div>
+            
+           
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
